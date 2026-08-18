@@ -1,0 +1,6 @@
+export * from './createAlunos.service'
+export * from './deleteAlunos.service'
+export * from './getAlunos.service'
+export * from './updateAlunos.service'
+export * from './exportarAlunos.service'
+export * from './getListagemAlunos.service'
