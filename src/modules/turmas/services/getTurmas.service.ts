@@ -1,16 +1,16 @@
 import { Injectable } from "@nestjs/common";
-import { FuncionarioRepository } from "../repository/funcionarios.repository";
+import { TurmaRepository } from "../repository/turmas.repository";
 
 @Injectable()
-export class GetFuncionarioService {
+export class GetTurmaService {
     constructor(
-        private funcionarioRepository: FuncionarioRepository
+        private turmaRepository: TurmaRepository
     ) {}
 
     async execute(propertieName?: string, propertieValue?: any) {
         let clausulaWhere = {}
         clausulaWhere[propertieName] = propertieValue
-        return await this.funcionarioRepository.get().find({
+        return await this.turmaRepository.get().find({
             where: clausulaWhere
         })
     }

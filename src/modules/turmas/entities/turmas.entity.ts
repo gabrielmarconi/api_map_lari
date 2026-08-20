@@ -1,15 +1,15 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 
-@Entity('funcionarios')
-export class FuncionarioEntity {
+@Entity('turmas')
+export class TurmaEntity {
 
     @PrimaryGeneratedColumn()
     public id: number
 
     @Column()
-    public idUsuario: number            
+    public nome: string   
 
-    constructor(props?: Partial<FuncionarioEntity>) {
+    constructor(props?: Partial<TurmaEntity>) {
         Object.assign(this, props)
     }
 }

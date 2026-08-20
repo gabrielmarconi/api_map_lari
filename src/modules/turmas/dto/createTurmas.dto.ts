@@ -1,13 +1,13 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsNotEmpty, IsOptional } from "class-validator";
 
-export class CreateFuncionariosDTO {    
+export class CreateTurmasDTO {    
     
     @IsOptional()
     public id: number
 
     @ApiProperty()
-    @IsNotEmpty({ message: 'O campo idUsuario é obrigatório!' })
-    public idUsuario: number 
+    @IsNotEmpty({ message: 'O campo nome é obrigatório!' })
+    public nome: string
 
 }

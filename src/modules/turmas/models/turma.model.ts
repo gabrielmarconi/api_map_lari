@@ -1,15 +1,26 @@
 import { ApiProperty } from "@nestjs/swagger";
 
-export class Funcionario {
+export class Turma {
     @ApiProperty()
     id: number;
 
     @ApiProperty()
-    idUsuario: number        
+    nome: string
+
+    @ApiProperty()
+    alunos: Array<TurmaAluno>
     
 }
 
-export class FuncionarioExportacao {
+class TurmaAluno {
+    @ApiProperty()
+    idTurma: number;
+
+    @ApiProperty()
+    idAluno: number
+}
+
+export class TurmaExportacao {
     
     @ApiProperty()
     filename: string
